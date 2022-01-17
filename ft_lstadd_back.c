@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 04:01:55 by hmoon             #+#    #+#             */
-/*   Updated: 2021/06/03 04:46:36 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:47:37 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *ret;
+	t_list	*ret;
 
 	if (!*lst)
 		*lst = new;

@@ -6,17 +6,20 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 23:59:16 by hmoon             #+#    #+#             */
-/*   Updated: 2021/06/03 02:33:51 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:46:57 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		count_num(int n)
+static	int	count_num(int n)
 {
-	int cnt;
+	int	cnt;
 
-	cnt = (n <= 0 ? 1 : 0);
+	if (n <= 0)
+		cnt = 1;
+	else
+		cnt = 0;
 	while (n != 0)
 	{
 		n /= 10;
@@ -25,15 +28,19 @@ static	int		count_num(int n)
 	return (cnt);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	unsigned int	num;
 	int				count;
 	char			*ret;
 
-	num = (n > 0 ? n : -n);
+	if (n > 0)
+		num = n;
+	else
+		num = -n;
 	count = count_num(n);
-	if (!(ret = (char*)malloc(sizeof(char) * (count + 1))))
+	ret = (char *)malloc(sizeof(char) * (count + 1));
+	if (!ret)
 		return (NULL);
 	ret[count] = '\0';
 	while (count > 0)

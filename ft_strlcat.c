@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 05:38:05 by hmoon             #+#    #+#             */
-/*   Updated: 2021/05/28 19:19:06 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:56:17 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t len_dst;
-	size_t len_src;
+	size_t	i;
+	size_t	len_dst;
+	size_t	len_src;
 
 	i = 0;
 	len_dst = ft_strlen(dst);

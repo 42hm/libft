@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 03:15:09 by hmoon             #+#    #+#             */
-/*   Updated: 2021/05/28 04:15:55 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:39:00 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	ft_bzero(void *s, size_t n)
 {
 	while (n--)
 	{
-		*(unsigned char*)s++ = 0;
+		*(unsigned char *)s++ = 0;
 	}
 }

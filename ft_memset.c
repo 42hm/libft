@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 02:51:51 by hmoon             #+#    #+#             */
-/*   Updated: 2021/05/29 00:06:07 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:51:56 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *temp;
+	unsigned char	*temp;
 
 	temp = b;
 	while (len--)

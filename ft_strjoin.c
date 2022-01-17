@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 21:45:28 by hmoon             #+#    #+#             */
-/*   Updated: 2021/06/03 03:22:41 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:56:30 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	ret = (char*)malloc((len_s1 + len_s2 + 1) * sizeof(char));
+	ret = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
 	if (!ret)
 		return (NULL);
 	ft_strlcpy(ret, s1, len_s1 + 1);

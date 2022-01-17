@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 05:11:53 by hmoon             #+#    #+#             */
-/*   Updated: 2021/06/03 05:14:48 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:49:57 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *ret;
-	t_list *tmp;
+	t_list	*ret;
+	t_list	*tmp;
 
 	ret = NULL;
 	while (lst)
 	{
-		if (!(tmp = ft_lstnew(f(lst->content))))
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
 		{
 			ft_lstclear(&ret, del);
 			return (NULL);

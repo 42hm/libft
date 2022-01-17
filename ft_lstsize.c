@@ -6,13 +6,13 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 03:47:22 by hmoon             #+#    #+#             */
-/*   Updated: 2021/06/03 03:49:51 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:50:51 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	t_list	*curr;
 	int		count;

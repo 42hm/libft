@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 03:30:01 by hmoon             #+#    #+#             */
-/*   Updated: 2021/05/28 19:54:16 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:51:36 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *temp;
+	unsigned char	*temp;
 
 	temp = dst;
 	if (!dst && !src)
 		return (0);
 	while (n--)
 	{
-		*temp++ = *(unsigned char*)src++;
+		*temp++ = *(unsigned char *)src++;
 	}
 	return (dst);
 }

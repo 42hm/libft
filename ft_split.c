@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 23:18:14 by hmoon             #+#    #+#             */
-/*   Updated: 2021/06/05 03:56:31 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 17:14:20 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static	size_t	cset(char const *s, char c, size_t *count)
 {
-	size_t cnt;
+	size_t	cnt;
 
 	*count = 0;
 	cnt = 0;
@@ -48,14 +48,17 @@ static	char	**ret_free(char **ret, size_t i)
 	return (NULL);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**ret;
 	size_t	size;
 	size_t	index;
 	size_t	count;
 
-	if (!s || !(ret = (char**)malloc(sizeof(char*) * (cset(s, c, &count) + 1))))
+	if (!s)
+		return (NULL);
+	ret = (char **)malloc(sizeof(char *) * (cset(s, c, &count) + 1));
+	if (!ret)
 		return (NULL);
 	index = 0;
 	while (index < count)
@@ -65,7 +68,8 @@ char			**ft_split(char const *s, char c)
 			s++;
 		while (s[size] != c && s[size] != '\0')
 			size++;
-		if (!(ret[index++] = ft_substr(s, 0, size)))
+		ret[index++] = ft_substr(s, 0, size);
+		if (!ret)
 			return (ret_free(ret, index - 1));
 		s += size;
 	}

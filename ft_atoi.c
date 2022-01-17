@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 20:07:52 by hmoon             #+#    #+#             */
-/*   Updated: 2021/06/06 12:18:54 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/01/17 16:37:24 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static	int	is_white_minus(const char *str, int *minus)
 	return (i);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long long	ret;
 	long long	tmp;
