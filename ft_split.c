@@ -6,7 +6,7 @@
 /*   By: hmoon <hmoon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 23:18:14 by hmoon             #+#    #+#             */
-/*   Updated: 2022/01/17 17:14:20 by hmoon            ###   ########.fr       */
+/*   Updated: 2022/03/20 18:36:21 by hmoon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,16 @@ static	size_t	cset(char const *s, char c, size_t *count)
 	return (cnt);
 }
 
-static	char	**ret_free(char **ret, size_t i)
+static	char	**split_free(char **ret)
 {
-	while (i >= 0)
+	size_t	i;
+
+	i = 0;
+	while (ret[i] != 0)
 	{
 		free(ret[i]);
 		ret[i] = NULL;
-		if (i == 0)
-			break ;
-		i--;
+		i++;
 	}
 	free(ret);
 	ret = NULL;
@@ -70,7 +71,7 @@ char	**ft_split(char const *s, char c)
 			size++;
 		ret[index++] = ft_substr(s, 0, size);
 		if (!ret)
-			return (ret_free(ret, index - 1));
+			return (split_free(ret));
 		s += size;
 	}
 	ret[index] = 0;
